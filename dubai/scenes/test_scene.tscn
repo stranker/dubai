@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjmukxc5t68nt"]
+
+[ext_resource type="PackedScene" uid="uid://dedrbfk00ocwj" path="res://objects/spawner.tscn" id="1_g7g4h"]
+
+[node name="TestScene" type="Node3D"]
+
+[node name="Spawner" parent="." instance=ExtResource("1_g7g4h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.258254, 0)
+one_timer = false
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.338067, 0)
+size = Vector3(10.0303, 0.436523, 239.086)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.530452, 0.847715, 0, -0.847715, 0.530452, 0, 6.823, 10.6672)
+current = true

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dedrbfk00ocwj"]
+
+[ext_resource type="Script" uid="uid://cff6nbagv7rau" path="res://objects/spawner.gd" id="1_uk7qp"]
+[ext_resource type="PackedScene" uid="uid://cuwgh2x786mi6" path="res://objects/pistacchio.tscn" id="2_unxpu"]
+
+[node name="Spawner" type="Marker3D" node_paths=PackedStringArray("timer")]
+script = ExtResource("1_uk7qp")
+enemy_scene = ExtResource("2_unxpu")
+timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

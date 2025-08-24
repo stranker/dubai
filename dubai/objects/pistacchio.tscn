@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuwgh2x786mi6"]
+
+[ext_resource type="Texture2D" uid="uid://cq6nd7evu73eh" path="res://assets/pistacchio.png" id="1_erhny"]
+[ext_resource type="Script" uid="uid://dp2hwepiyupop" path="res://objects/pistacchio.gd" id="1_wn4t3"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wn4t3"]
+radius = 0.339162
+
+[node name="Pistacchio" type="Area3D"]
+script = ExtResource("1_wn4t3")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 0.02
+billboard = 1
+double_sided = false
+texture_filter = 0
+texture = ExtResource("1_erhny")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_wn4t3")
